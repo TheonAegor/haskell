@@ -11,4 +11,6 @@ changeNum nbr =
                 in
                 nbr * coefficient / correction
 
-main = print ( prepareLength (changeNum 56))
+noNameFunc x = x * x
+
+main = print ( prepareLength (changeNum (noNameFunc 4)))
