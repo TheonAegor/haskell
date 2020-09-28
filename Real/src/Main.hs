@@ -1,9 +1,14 @@
-indicate :: String -> String
-indicate address
-    | address == "127.0.0.1" = "local host" 
-    | null address = "empty IP-address" 
-    | otherwise = address
+prepareLength :: Double -> Double
+prepareLength line = 
+                    line * coefficient * correlation
+                    where coefficient = 0.4595
+                          correlation = 1.2
 
---indicate address = if address == "127.0.0.1" then "localhost" else address
+changeNum :: Double -> Double
+changeNum nbr = 
+                let coefficient = 3.14
+                    correction = 0.015
+                in
+                nbr * coefficient / correction
 
-main = putStrLn ( indicate "Hello world")
+main = print ( prepareLength (changeNum 56))
