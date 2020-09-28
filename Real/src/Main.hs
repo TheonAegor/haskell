@@ -1,15 +1,9 @@
---import Helpers
---import Data.Text
+indicate :: String -> String
+indicate address
+    | address == "127.0.0.1" = "local host" 
+    | null address = "empty IP-address" 
+    | otherwise = address
 
---main = putStrLn (hello "Taegor")
+--indicate address = if address == "127.0.0.1" then "localhost" else address
 
--- main = putStrLn "Hi, haskeller!"
-
-simpleFunc :: Int -> Int
-
-simpleFunc 1 = 666
-
-simpleFunc x = x * x
-
-
-main = print (simpleFunc 10)
+main = putStrLn ( indicate "Hello world")
